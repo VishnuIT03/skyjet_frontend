@@ -1,0 +1,92 @@
+.activity-page {
+  min-height: 90vh;
+  width: 90%;
+  padding-bottom: 3%;
+  margin: 3% auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.activity-list-container {
+  width: 80%;
+  margin: 5% auto;
+}
+
+.activity-list-card {
+  height: 30vh;
+  width: 90%;
+  margin: 3% auto;
+  padding-right: 3.6%;
+  padding-bottom: 1%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
+}
+
+.big-activity-list-card {
+  transition: 0.5s;
+  height: auto;
+}
+
+.activity-list-card h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #00b97f;
+  cursor: pointer;
+}
+
+.activity-details-container {
+  width: 80%;
+  margin: 3% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-details-container table {
+  width: 40%;
+}
+
+.activity-details-container table tr td:nth-child(1),
+.activity-details-container table tr td:nth-child(2) {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #212121;
+  text-align: left;
+}
+
+.activity-details-container table tr td:nth-child(3) {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #565656;
+  text-align: left;
+}
+
+.activity-page-header {
+  width: 80%;
+  padding: 3%;
+  margin: 5% auto;
+  border-radius: 5px;
+  background-color: #ffe9c8;
+  box-shadow: #32325d40 0px 30px 60px -12px inset,
+    #0000004d 0px 18px 36px -18px inset;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.booking-button-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.booking-filter-button {
+  padding: 4% 5%;
+}
+
+.active-filter {
+  background-color: #ffffff;
+  color: #212121;
+}

@@ -1,0 +1,14 @@
+.download-button {
+    background-color: #007bff; /* Change to your desired background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3; /* Change to your desired hover color */
+  }
+  

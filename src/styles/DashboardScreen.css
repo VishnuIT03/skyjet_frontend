@@ -1,0 +1,363 @@
+.dashboard-page {
+  width: 90%;
+  padding-bottom: 3%;
+  margin: 3% auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.dashboard-detail-container {
+  width: 80%;
+  margin: 3% auto;
+}
+
+.airport-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  overflow: scroll;
+  overflow-x: hidden;
+  border-bottom: 1px solid #8d8d8d;
+  /* background-color: blue; */
+}
+
+.airport-container-header {
+  width: 96%;
+  padding: 1% 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: #32325d40 0px 6px 12px -2px, #0000004d 0px 3px 7px -3px;
+}
+
+.admin-add-button {
+  padding: 1% 3%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  background-color: #000000;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-airport-form {
+  position: absolute;
+  max-height: 60vh;
+  overflow: scroll;
+  width: 50%;
+  padding-bottom: 1%;
+  margin: 2% 25%;
+  z-index: 102;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
+  display: none;
+}
+
+.active-add-airport-form {
+  display: block;
+}
+
+.add-airport-form-header {
+  width: 96%;
+  padding: 2%;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+  background-color: #ffd597;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-airport-form-header i {
+  cursor: pointer;
+}
+
+.add-airport-form .input-fields {
+  margin-top: 5%;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.add-airport-form .input-fields input,
+.add-airport-form .input-fields select {
+  height: 2rem;
+  width: 90%;
+  padding-left: 2%;
+  font-size: 1.2rem;
+}
+
+.add-airport-form .input-fields label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.add-airport-form .input-fields input:focus,
+.add-airport-form .input-fields select:focus {
+  height: 2.3rem;
+  outline: none;
+  border: 1px solid #8d8d8d;
+  border-radius: 2px;
+}
+
+.add-airport-form .input-fields label span {
+  color: #ff0000;
+}
+
+.airport-form-button-container {
+  width: 100%;
+  margin: 5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.airport-add-button,
+.airport-cancel-button {
+  padding: 2% 5%;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  background-color: #000000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.airport-cancel-button {
+  color: #000000;
+  background-color: #dadada;
+}
+
+.airport-list-container {
+  position: absolute;
+  z-index: 101;
+  width: 100%;
+  margin: 5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.airport-card {
+  height: 60vh;
+  width: 30%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.airport-card-image {
+  width: 100%;
+  height: 60%;
+  border-radius: 5px;
+}
+
+.airport-card-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.airport-card-detail > h2 {
+  margin-top: 3%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.airport-card-detail > h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #00b97f;
+}
+
+.airport-card-detail > h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #8d8d8d;
+}
+
+.airport-card-button-container {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.airport-card-edit-button,
+.airport-card-delete-button {
+  padding: 1% 3%;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  background-color: #0000ff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.airport-card-delete-button {
+  background-color: #a12424;
+}
+
+.airlines-list-container {
+  position: relative;
+  width: 94%;
+  height: 25vh;
+  overflow: hidden;
+  padding: 0.5% 1%;
+  margin: 2% auto;
+  border-radius: 5px;
+  box-shadow: #3c40434d 0px 1px 2px 0px, #3c404326 0px 2px 6px 2px;
+}
+
+.big-airlines-list-container {
+  height: 70vh;
+  overflow: scroll;
+}
+
+.airlines-list-container-header {
+  width: 100%;
+  margin: 1.5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+}
+
+.airlines-image-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.airlines-image-container p {
+  color: #8d8d8d;
+}
+
+.airlines-image {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+.airlines-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.airlines-list-container h5 {
+  position: absolute;
+  margin-top: -40%;
+  margin-left: 40%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #00b97f;
+  cursor: pointer;
+}
+
+.airline-button-container {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.airline-button-container a {
+  font-size: 0.8rem;
+  padding: 4% 3%;
+  margin-bottom: 3%;
+}
+
+.flight-list-container {
+  height: 30vh;
+  width: 96%;
+  margin: 9% auto;
+}
+
+.flights-list-card {
+  width: 96%;
+  height: 25vh;
+  padding: 2%;
+  overflow: hidden;
+  box-shadow: #3c40434d 0px 1px 2px 0px, #3c404326 0px 2px 6px 2px;
+  border-radius: 5px;
+}
+
+.big-flights-list-card {
+  height: auto;
+}
+
+.flights-list-card-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18rem;
+}
+
+.flights-schedule-list-container {
+  height: 30vh;
+  width: 90%;
+  padding-top: 7%;
+  margin: 5% auto;
+}
+
+.add-schedule-form {
+  margin: -50% 25% 5% 25%;
+}
+
+.flight-booking-card-image p {
+  margin-top: -3%;
+  padding-bottom: 5%;
+  font-size: 0.7rem;
+  color: #8d8d8d;
+}
+
+.flight-departure-details h2 span,
+.flight-arrival-details h2 span {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #8d8d8d;
+}
+
+.schedule-button-container {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.flight-status {
+  padding: 1% 3%;
+  border-radius: 25px;
+}
+
+.flight-status.red {
+  background-color: #ec6b6b;
+}
+
+.flight-status.green {
+  background-color: #00b97f;
+}
+
+.flight-status.yellow {
+  background-color: #ffff6f;
+}

@@ -1,0 +1,129 @@
+.signin-container {
+  width: 30%;
+  margin: 5% auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: #0e1e251f 0px 2px 4px 0px, #0e1e2552 0px 2px 16px 0px;
+}
+
+.signin-container-header {
+  width: 96%;
+  padding: 4% 2%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  background-color: #ffd597;
+}
+
+.signin-form {
+  width: 90%;
+  margin: 5% auto;
+}
+
+.signin-form .input-fields {
+  margin-bottom: 5%;
+  text-align: left;
+}
+
+.signin-form .input-fields label {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.signin-form .input-fields label span {
+  color: #ff0000;
+}
+
+.signin-form .input-fields input[type='email'],
+.signin-form .input-fields input[type='password'],
+.signin-form .input-fields input[type='text'] {
+  height: 3rem;
+  width: 98%;
+  padding-left: 2%;
+  outline: none;
+  border: 1px solid #b7b7b7;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #505050;
+}
+
+.signin-form .input-fields input[type='password']::placeholder,
+.signin-form .input-fields input[type='text']::placeholder {
+  font-size: 0.8rem;
+}
+
+.signin-form .input-fields:nth-child(3) label {
+  margin-left: 2%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b7b7b7;
+}
+
+.signin-form .input-fields input[type='checkbox'] {
+  cursor: pointer;
+}
+
+.signup-form .input-fields:nth-child(3) label {
+  margin-left: -0.5%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.signup-form .input-fields:nth-child(3) input[type='password'] {
+  height: 3rem;
+  width: 98%;
+  padding-left: 2%;
+  outline: none;
+  border: 1px solid #b7b7b7;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #505050;
+}
+
+.signup-form .input-fields:nth-child(4) label {
+  margin-left: 2%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b7b7b7;
+}
+
+.signin-form a {
+  margin-left: 55%;
+  text-decoration: none;
+  color: blue;
+}
+
+.signin-button {
+  width: 90%;
+  margin: 10% 0%;
+  padding: 3% 0%;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signin-button:hover {
+  transition: 0.3s;
+  color: #000000;
+  background-color: #ffd597;
+}
+
+.signin-form h3 {
+  padding-bottom: 5%;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.signin-form h3 a {
+  margin-left: 1%;
+}
+
+.signup-container {
+  margin: 2% auto;
+}
