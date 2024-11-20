@@ -35,7 +35,7 @@ export default function HomeSearch() {
   const fetchAirports = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get('https://airlines-be.onrender.com/api/airport/fetch');
+      const { data } = await Axios.get('https://skyjet-backend-1.onrender.com/api/airport/fetch');
       localStorage.setItem('airports', JSON.stringify(data));
       ctxDispatch({ type: 'ADD_AIRPORT', payload: data });
       dispatch({ type: 'FETCH_SUCCESS' });
@@ -53,7 +53,7 @@ export default function HomeSearch() {
     e.preventDefault();
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.post(`https://airlines-be.onrender.com/api/search/`, {
+      const { data } = await Axios.post(`https://skyjet-backend-1.onrender.com/api/search/`, {
         departureAirport,
         arrivalAirport,
         searchDate,
