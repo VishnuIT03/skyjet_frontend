@@ -44,7 +44,7 @@ export default function SignupScreen() {
       if (validatePassword(password)) {
         try {
           dispatch({ type: 'FETCH_REQUEST' });
-          const { data } = await Axios.put('https://airlines-be.onrender.com/api/users/sign-up', {
+          const { data } = await Axios.put('https://skyjet-backend-1.onrender.com/api/users/sign-up', {
             email,
             password,
           });
