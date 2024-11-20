@@ -34,7 +34,7 @@ export default function ActivityCard({ activity, schedule, index, type }) {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
       const { data } = await Axios.put(
-        `https://airlines-be.onrender.com/api/schedules/seat/${schedule._id}`,
+        `https://skyjet-backend-1.onrender.com/api/schedules/seat/${schedule._id}`,
         {
           seats,
         },
@@ -46,7 +46,7 @@ export default function ActivityCard({ activity, schedule, index, type }) {
       ctxDispatch({ type: 'ADD_SCHEDULES', payload: data });
       try {
         const { data } = await Axios.put(
-          `https://airlines-be.onrender.com/api/booking/delete/${bookingId}`,
+          `https://skyjet-backend-1.onrender.com/api/booking/delete/${bookingId}`,
           {},
           {
             headers: { authorization: `Bearer ${userDetails.token}` },
