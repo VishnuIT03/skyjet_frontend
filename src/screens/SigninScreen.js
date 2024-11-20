@@ -35,10 +35,11 @@ export default function SigninScreen() {
     e.preventDefault();
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.post('https://airlines-be.onrender.com/api/users/sign-in', {
+      const { data } = await Axios.post('https://skyjet-backend-1.onrender.com/api/users/sign-in', {
         email,
         password,
       });
+      
       localStorage.setItem('userDetails', JSON.stringify(data));
       ctxDispatch({ type: 'SIGN_IN', payload: data });
       toast.success(data.users.firstname + ' signed in successfully!');
