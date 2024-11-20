@@ -35,7 +35,7 @@ export default function Airport() {
   const fetchAirports = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get('https://airlines-be.onrender.com/api/airport', {
+      const { data } = await Axios.get('https://skyjet-backend-1.onrender.com/api/airport', {
         headers: { authorization: `Bearer ${userDetails.token}` },
       });
       localStorage.setItem('airports', JSON.stringify(data));
@@ -57,7 +57,7 @@ export default function Airport() {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
       const { data } = await Axios.put(
-        'https://airlines-be.onrender.com/api/airport/add',
+        'https://skyjet-backend-1.onrender.com/api/airport/add',
         {
           airportCode,
           airportName,
@@ -84,7 +84,7 @@ export default function Airport() {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
       const { data } = await Axios.put(
-        `https://airlines-be.onrender.com/api/airport/update/${airportId}`,
+        `https://skyjet-backend-1.onrender.com/api/airport/update/${airportId}`,
         {
           airportCode,
           airportName,
@@ -128,7 +128,7 @@ export default function Airport() {
   const deleteAirport = async (airport, airportName) => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get(`https://airlines-be.onrender.com/api/airport/delete/${airport}`, {
+      const { data } = await Axios.get(`https://skyjet-backend-1.onrender.com/api/airport/delete/${airport}`, {
         headers: { authorization: `Bearer ${userDetails.token}` },
       });
       localStorage.setItem('airports', JSON.stringify(data));
