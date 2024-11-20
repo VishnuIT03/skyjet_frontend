@@ -44,7 +44,7 @@ export default function Flights({ airline }) {
   const fetchAirports = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get('https://airlines-be.onrender.com/api/airport', {
+      const { data } = await Axios.get('https://skyjet-backend-1.onrender.com/api/airport', {
         headers: { authorization: `Bearer ${userDetails.token}` },
       });
       localStorage.setItem('airports', JSON.stringify(data));
@@ -59,7 +59,7 @@ export default function Flights({ airline }) {
   const fetchFlights = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get('https://airlines-be.onrender.com/api/flights', {
+      const { data } = await Axios.get('https://skyjet-backend-1.onrender.com/api/flights', {
         headers: { authorization: `Bearer ${userDetails.token}` },
       });
       localStorage.setItem('flights', JSON.stringify(data));
@@ -74,7 +74,7 @@ export default function Flights({ airline }) {
   const fetchSchedules = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get('https://airlines-be.onrender.com/api/schedules', {
+      const { data } = await Axios.get('https://skyjet-backend-1.onrender.com/api/schedules', {
         headers: { authorization: `Bearer ${userDetails.token}` },
       });
       localStorage.setItem('schedules', JSON.stringify(data));
@@ -115,7 +115,7 @@ export default function Flights({ airline }) {
       ];
 
       const { data } = await Axios.put(
-        `https://airlines-be.onrender.com/api/schedules/add/${flightId}`,
+        `https://skyjet-backend-1.onrender.com/api/schedules/add/${flightId}`,
         {
           departureAirport,
           departureTime,
@@ -143,12 +143,12 @@ export default function Flights({ airline }) {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
 
-      await Axios.get(`https://airlines-be.onrender.com/api/booking/admin/delete/${scheduleId}`, {
+      await Axios.get(`https://skyjet-backend-1.onrender.com/api/booking/admin/delete/${scheduleId}`, {
         headers: { authorization: `Bearer ${userDetails.token}` },
       });
 
       const { data } = await Axios.put(
-        `https://airlines-be.onrender.com/api/schedules/delete/${scheduleId}`,
+        `https://skyjet-backend-1.onrender.com/api/schedules/delete/${scheduleId}`,
 
         {
           headers: { authorization: `Bearer ${userDetails.token}` },
@@ -174,7 +174,7 @@ export default function Flights({ airline }) {
       dispatch({ type: 'FETCH_REQUEST' });
 
       const result = await Axios.put(
-        `https://airlines-be.onrender.com/api/schedules/admin/delete/${flightId}`,
+        `https://skyjet-backend-1.onrender.com/api/schedules/admin/delete/${flightId}`,
         {
           headers: { authorization: `Bearer ${userDetails.token}` },
         }
@@ -190,7 +190,7 @@ export default function Flights({ airline }) {
 
       scheduleIds &&
         (await Axios.put(
-          `https://airlines-be.onrender.com/api/booking/admin/delete`,
+          `https://skyjet-backend-1.onrender.com/api/booking/admin/delete`,
           {
             scheduleIds,
           },
@@ -200,7 +200,7 @@ export default function Flights({ airline }) {
         ));
 
       const airlines = await Axios.put(
-        `https://airlines-be.onrender.com/api/airlines/admin/delete/${airlinesId}`,
+        `https://skyjet-backend-1.onrender.com/api/airlines/admin/delete/${airlinesId}`,
         {
           flightCode,
         },
@@ -213,7 +213,7 @@ export default function Flights({ airline }) {
       ctxDispatch({ type: 'ADD_AIRLINES', payload: airlines.data });
 
       const { data } = await Axios.get(
-        `https://airlines-be.onrender.com/api/flights/admin/delete/${flightId}`,
+        `https://skyjet-backend-1.onrender.com/api/flights/admin/delete/${flightId}`,
         {
           headers: { authorization: `Bearer ${userDetails.token}` },
         }
