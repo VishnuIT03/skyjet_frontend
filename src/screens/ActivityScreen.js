@@ -52,7 +52,7 @@ export default function ActivityScreen() {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
       const { data } = await Axios.get(
-        `https://airlines-be.onrender.com/api/booking/${userDetails.users._id}`,
+        `https://skyjet-backend-1.onrender.com/api/booking/${userDetails.users._id}`,
         {
           headers: { authorization: `Bearer ${userDetails.token}` },
         }
@@ -69,7 +69,7 @@ export default function ActivityScreen() {
   const fetchAllActivities = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get(`https://airlines-be.onrender.com/api/booking`, {
+      const { data } = await Axios.get(`https://skyjet-backend-1.onrender.com/api/booking`, {
         headers: { authorization: `Bearer ${userDetails.token}` },
       });
       localStorage.setItem('allActivities', JSON.stringify(data));
@@ -92,7 +92,7 @@ export default function ActivityScreen() {
       dispatch({ type: 'FETCH_REQUEST' });
       if (flightNumber !== '' && searchDate === '') {
         const { data } = await Axios.get(
-          `https://airlines-be.onrender.com/api/booking/flight/search/${flightNumber}`,
+          `https://skyjet-backend-1.onrender.com/api/booking/flight/search/${flightNumber}`,
           {
             headers: { authorization: `Bearer ${userDetails.token}` },
           }
@@ -106,13 +106,13 @@ export default function ActivityScreen() {
 
       if (flightNumber === '' && searchDate !== '') {
         const { data } = await Axios.get(
-          `https://airlines-be.onrender.com/api/schedules/flight/search/${searchDate}`,
+          `https://skyjet-backend-1.onrender.com/api/schedules/flight/search/${searchDate}`,
           {
             headers: { authorization: `Bearer ${userDetails.token}` },
           }
         );
         const bookings = await Axios.post(
-          `https://airlines-be.onrender.com/api/booking/flight/search/date`,
+          `https://skyjet-backend-1.onrender.com/api/booking/flight/search/date`,
           { data },
           {
             headers: { authorization: `Bearer ${userDetails.token}` },
