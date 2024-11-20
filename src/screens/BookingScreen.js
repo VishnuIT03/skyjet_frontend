@@ -35,7 +35,7 @@ export default function BookingScreen() {
   const fetchFlights = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get('https://airlines-be.onrender.com/api/flights/fetch');
+      const { data } = await Axios.get('https://skyjet-backend-1.onrender.com/api/flights/fetch');
       localStorage.setItem('flights', JSON.stringify(data));
       ctxDispatch({ type: 'ADD_FLIGHTS', payload: data });
       dispatch({ type: 'FETCH_SUCCESS' });
@@ -48,7 +48,7 @@ export default function BookingScreen() {
   const fetchSchedules = async () => {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
-      const { data } = await Axios.get('https://airlines-be.onrender.com/api/schedules/fetch');
+      const { data } = await Axios.get('https://skyjet-backend-1.onrender.com/api/schedules/fetch');
       localStorage.setItem('schedules', JSON.stringify(data));
       ctxDispatch({ type: 'ADD_SCHEDULES', payload: data });
       dispatch({ type: 'FETCH_SUCCESS' });
