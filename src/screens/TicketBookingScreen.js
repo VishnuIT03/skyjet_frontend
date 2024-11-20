@@ -93,7 +93,7 @@ export default function TicketBookingScreen() {
     
     setPrice(newValue);
     // creating a new order
-    const result = await Axios.post('https://airlines-be.onrender.com/custom_pay',{
+    const result = await Axios.post('https://skyjet-backend-1.onrender.com/custom_pay',{
       amount: newValue
     });
 
@@ -157,7 +157,7 @@ export default function TicketBookingScreen() {
     try {
       dispatch({ type: 'FETCH_REQUEST' });
       const { data } = await Axios.put(
-        `https://airlines-be.onrender.com/api/schedules/seat/${scheduleId}`,
+        `https://skyjet-backend-1.onrender.com/api/schedules/seat/${scheduleId}`,
         {
           seats,
         },
@@ -169,7 +169,7 @@ export default function TicketBookingScreen() {
       ctxDispatch({ type: 'ADD_SCHEDULES', payload: data });
       try {
         const { data } = await Axios.put(
-          `https://airlines-be.onrender.com/api/booking/add/${userDetails.users._id}`,
+          `https://skyjet-backend-1.onrender.com/api/booking/add/${userDetails.users._id}`,
           {
             lastName,
             firstName,
